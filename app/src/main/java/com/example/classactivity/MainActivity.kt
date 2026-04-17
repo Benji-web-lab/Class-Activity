@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         // accessing the song class to populate song objects  with specific attributes
         var song1 = Song("Pop Style","Drake", 2016,"")
         var song2 = Song("We Paid", "Lil Baby", 2022,"" )
-        var song3 = Song("That's That", "Sheff G")
+        var song3 = Song("That's That", 'Sheff G')
 
 
 
