@@ -20,15 +20,15 @@ class MainActivity : AppCompatActivity() {
         // accessing the song class to populate song objects  with specific attributes
         var song1 = Song("Pop Style","Drake", 2016,"4:24")
         var song2 = Song("We Paid", "Lil Baby", 2022,"3:35" )
-        var song3 = Song("That's That", 'Sheff G')
+        var song3 = Song("That's That", "Sheff G",0,"")
 
         // NEW songs using the new secondary constructor only song name known
-        var song4 = song("Middle Child")
-        var song5 = song("Big Dreams")
+        var song4 = Song("Middle Child", "Unknown", 0,"")
+        var song5 = Song("Big Dreams", "Unknown", 0,"")
 
 
         //creating an array to hold the song objects
-        var songs = arrayOf<Song>(song1, song2, song3)
+        var songs = arrayOf<Song>(song1, song2, song3, song4, song5)
         var songDisplay = ""
          for (song in songs){
              songDisplay += "${song.GetDisplayString()}\n\n"

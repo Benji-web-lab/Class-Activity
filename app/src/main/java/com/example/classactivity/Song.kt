@@ -31,8 +31,8 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
 }
     // secondary constructor
     class song (songName: String, songArtist: String, songYear: Int, songDuration: String) {
-     // Attributes
-     var name: String = ""
+        // Attributes
+        var name: String = ""
         var artist: String = ""
         var year: Int = 0
         var duration: String = ""
@@ -44,12 +44,41 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
 
         // init block is used to set the values from the primary constructor into the attributes
         init {
-        name = songName
-        artist = songArtist
-        year = songYear
-        duration = songDuration
+            name = songName
+            artist = songArtist
+            year = songYear
+            duration = songDuration
+
+
+
+            fun Play() {
+                Log.v( "Song", "$name is playing.")
+            }
+
+            fun Pause() {
+                Log.v( "Song", "$name is paused.")
+            }
+
+            fun Stop() {
+                Log.v("Song", "$name is stopping")
+            }
+
+            fun Favourte(): Boolean {
+                Log.v("Song", "$name favourited now")
+                return true
+            }
+
+            fun GetDisplayString(): String {
+                return "$name - $artist ($duration)"
+            }
+        }
     }
-}
+
+
+
+
+
+
 
 
 
