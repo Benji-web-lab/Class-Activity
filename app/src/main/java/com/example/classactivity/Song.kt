@@ -10,18 +10,6 @@ class Song (songName: String, songArtist: String, songYear: Int, songDuration: S
     var year: Int = 0
     var duration: String = ""
 
-    // exception for if we only know the song name and artist
-    constructor(songName: String, songArtist: String) : this(songName, songArtist, 0, "") {
-    }
-init{
-
-}
-    //function to play song
-    fun Play() {
-        Log.v("song", "$name is playing.")
-    }
-
-
     //function to pause song
     fun Pause() {
         Log.v("song", "$name is paused.")
@@ -40,9 +28,28 @@ init{
     fun GetDisplayString(): String {
         return "$name - $artist ($duration)"
     }
-
 }
+    // secondary constructor
+    class song (songName: String, songArtist: String, songYear: Int, songDuration: String) {
+     // Attributes
+     var name: String = ""
+        var artist: String = ""
+        var year: Int = 0
+        var duration: String = ""
 
+
+        // NEW secondary constructor: only know the song name
+        constructor(songName: String) : this(songName, "Unknown Artist", 0, "")
+
+
+        // init block is used to set the values from the primary constructor into the attributes
+        init {
+        name = songName
+        artist = songArtist
+        year = songYear
+        duration = songDuration
+    }
+}
 
 
 
